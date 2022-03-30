@@ -1,4 +1,4 @@
-# # Question 1
+# # # Question 1
 
 # def string(team):
 #     last_index = len(team) - 1
@@ -10,7 +10,7 @@
 
 # string("Packers")
 
-# # Question 2
+# # # Question 2
 
 
 # def numbers(number_one, number_two):
@@ -25,7 +25,7 @@
 
 # numbers(0, 101)
 
-# # Question 3
+# # # Question 3
 # # loop over the letters in word = for loop
 # # append the letters of the word and the index to the final word +=?
 # # print the final_result
@@ -41,7 +41,7 @@
 # question_three_function("world peace")
 
 
-# # Question 4
+# # # Question 4
 # ingredient_list = ["sugar", "flour", "water", "milk", "egg"]
 
 
@@ -62,29 +62,25 @@
 # question_four(ingredient_list)
 
 
-# # Question 5
+# # # Question 5
 
-# list_of_colors = ["red", "yellow", "blue"]
-
-
-# def reverse_list(list):
-#     reverse_list = []
-#     reverse_list.append(list[-1])
-#     reverse_list.append(list[-2])
-#     reverse_list.append(list[-3])
-
-#     print(reverse_list)
+list_of_colors = ["red", "yellow", "blue"]
 
 
-# reverse_list(list_of_colors)
+def reverse_list(list):
+    reverse_list = []
+    for items in range(len(list) - 1, -1, -1):
+        reverse_list.append(list[items])
 
-# for number in range(5)
-# for items in range(len(list)):
+    print(reverse_list)
 
 
-# # Question 6
-# list_of_names = ["Eli", "Brad", "Jimmy", "Todd", "Tim", "Tommy"]
-# new_list = []
+reverse_list(list_of_colors)
+
+
+# # # Question 6
+# # list_of_names = ["Eli", "Brad", "Jimmy", "Todd", "Tim", "Tommy"]
+# # new_list = []
 
 
 # def question_six(names):
@@ -97,11 +93,11 @@
 # question_six(list_of_names)
 
 
-# Question 1, page 2
-# make a function that will print out the word "hello"
-# get the length of the string
-# use the length of the string to get a reverse string using -1 step in the range
-# add together the reverse string
+# # Question 1, page 2
+# # make a function that will print out the word "hello"
+# # get the length of the string
+# # use the length of the string to get a reverse string using -1 step in the range
+# # add together the reverse string
 # def reverse_string(string):
 #     full_word = " "
 #     for item in range(len(string) - 1, -1, -1):
@@ -112,12 +108,12 @@
 # reverse_string("string")
 
 
-# Question 2, page 2
-# set up an input parameter
-# figure out how to capitalize letters
-# capitalize the first letter of the input
-# figure out how to capitalize after every " "
-# found the str.title function
+# # Question 2, page 2
+# # set up an input parameter
+# # figure out how to capitalize letters
+# # capitalize the first letter of the input
+# # figure out how to capitalize after every " "
+# # found the str.title function
 
 # def capitalize_letter(input):
 #     capitalize_word = str.title(input)
@@ -127,20 +123,31 @@
 # capitalize_letter(input("please enter a word "))
 
 
-# Question 3, page 2
-# set a function with use input as the parameter
-# reverse the input entered
-# set an if/else function to see if the input word == the input word in reverse
+# # Question 3, page 2
+# # set a function with use input as the parameter
+# # reverse the input entered
+# # set an if/else function to see if the input word == the input word in reverse
 
-def palindrome(input):
-    reversed_word = ""
-    for letter in range(len(input) - 1, -1, -1):
-        reversed_word += input[letter]
-    print(reversed_word)
-    if reversed_word == input:
-        print("Neat, its a palindrome!")
-    else:
-        print("try another word")
+# def palindrome(input):
+#     reversed_word = ""
+#     for letter in range(len(input) - 1, -1, -1):
+#         reversed_word += input[letter]
+#     print(reversed_word)
+#     if reversed_word == input:
+#         print("Neat, its a palindrome!")
+#     else:
+#         print("try another word")
 
 
-palindrome(input("please enter a word: "))
+# palindrome(input("please enter a word: "))
+
+
+# # Bonus Challange
+# # make a function to
+# def compress(word):
+#     for letters in range(len(word)):
+#         print(letters)
+#         print(word)
+
+
+# compress("aaaaaaabbbbbcccccccdddddeeee")
