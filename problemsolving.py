@@ -1,3 +1,4 @@
+
 # # # Question 1
 
 # def string(team):
@@ -64,18 +65,18 @@
 
 # # # Question 5
 
-list_of_colors = ["red", "yellow", "blue"]
+# list_of_colors = ["red", "yellow", "blue"]
 
 
-def reverse_list(list):
-    reverse_list = []
-    for items in range(len(list) - 1, -1, -1):
-        reverse_list.append(list[items])
+# def reverse_list(list):
+#     reverse_list = []
+#     for items in range(len(list) - 1, -1, -1):
+#         reverse_list.append(list[items])
 
-    print(reverse_list)
+#     print(reverse_list)
 
 
-reverse_list(list_of_colors)
+# reverse_list(list_of_colors)
 
 
 # # # Question 6
@@ -128,18 +129,23 @@ reverse_list(list_of_colors)
 # # reverse the input entered
 # # set an if/else function to see if the input word == the input word in reverse
 
-# def palindrome(input):
-#     reversed_word = ""
-#     for letter in range(len(input) - 1, -1, -1):
-#         reversed_word += input[letter]
-#     print(reversed_word)
-#     if reversed_word == input:
-#         print("Neat, its a palindrome!")
-#     else:
-#         print("try another word")
+
+def reverse_word_function(input):
+    reversed_word = ""
+    for letter in range(len(input) - 1, -1, -1):
+        reversed_word += input[letter]
+    return reversed_word
 
 
-# palindrome(input("please enter a word: "))
+def palindrome(input):
+    reversed_word = reverse_word_function(input)
+    if reversed_word == input:
+        print("Neat, its a palindrome!")
+    else:
+        print("try another word")
+
+
+palindrome(input("please enter a word: "))
 
 
 # # Bonus Challange
