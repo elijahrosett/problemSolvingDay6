@@ -171,6 +171,9 @@
 
 # Question 1, page 3
 
+
+
+
 def split_up_number(number):
     number_list = []
     for individual_number in range(len(str(number))):
@@ -186,9 +189,27 @@ def multiply_and_add(list):
         number_list.append(number_multiplied)
     return number_list
 
+def add_numbers(number_list):
+    total = sum(number_list)
+    return total
+        
 
 
 
+def master_function(number):
+    keep_checking = True
+    while keep_checking == True:
+        single_number = split_up_number(number)
+        multiplied_numbers = (multiply_and_add(single_number))
+        total = ""
+        total = add_numbers(multiplied_numbers)
+        number = total
+        if number == 1:
+            print("This is a happy number")
+            keep_checking = False
+        elif number == 4:
+            print("this is not a happy number")
+            keep_checking = False
+    
 
-single_number = split_up_number(1500)
-print(multiply_and_add(single_number))
+master_function(1)
