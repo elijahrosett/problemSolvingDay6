@@ -171,7 +171,6 @@
 
 # Question 1, page 3
 
-
 def split_up_number(number):
     number_list = []
     for individual_number in range(len(str(number))):
@@ -180,7 +179,16 @@ def split_up_number(number):
         number_list.append(single_number)
     return number_list
     
+def multiply_and_add(list):
+    number_list = []
+    for numbers in list:
+        number_multiplied = numbers **2 
+        number_list.append(number_multiplied)
+    return number_list
 
 
-single_number = split_up_number(25)
-print(single_number)
+
+
+
+single_number = split_up_number(1500)
+print(multiply_and_add(single_number))
