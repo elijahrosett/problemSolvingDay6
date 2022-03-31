@@ -130,30 +130,57 @@
 # # set an if/else function to see if the input word == the input word in reverse
 
 
-def reverse_word_function(input):
-    reversed_word = ""
-    for letter in range(len(input) - 1, -1, -1):
-        reversed_word += input[letter]
-    return reversed_word
+# def reverse_word_function(input):
+#     reversed_word = ""
+#     for letter in range(len(input) - 1, -1, -1):
+#         reversed_word += input[letter]
+#     return reversed_word
 
 
-def palindrome(input):
-    reversed_word = reverse_word_function(input)
-    if reversed_word == input:
-        print("Neat, its a palindrome!")
-    else:
-        print("try another word")
+# def palindrome(input):
+#     reversed_word = reverse_word_function(input)
+#     if reversed_word == input:
+#         print("Neat, its a palindrome!")
+#     else:
+#         print("try another word")
 
 
-palindrome(input("please enter a word: "))
+# palindrome(input("please enter a word: "))
 
 
 # # Bonus Challange
-# # make a function to
+# # make a function to compress a word
+#if index 0 = index 1 add 1 to count but if != index 1, still need to +1 to count
+
 # def compress(word):
-#     for letters in range(len(word)):
-#         print(letters)
-#         print(word)
+#     compressed_word = ""
+#     count = 1
+#     for index in range(len(word)-1):
+#         if word[index] == word[index + 1]:
+#             count = count + 1 
+#         else:
+#             compressed_word += (word[index] + str(count))
+            
+#             count = 1   
+       
+#     print(compressed_word)
+
+    
+# compress("aabbbcccc")
 
 
-# compress("aaaaaaabbbbbcccccccdddddeeee")
+# Question 1, page 3
+
+
+def split_up_number(number):
+    number_list = []
+    for individual_number in range(len(str(number))):
+        single_number =(str(number)[individual_number])
+        single_number = int(single_number)
+        number_list.append(single_number)
+    return number_list
+    
+
+
+single_number = split_up_number(25)
+print(single_number)
